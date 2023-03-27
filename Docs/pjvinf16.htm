@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>delphiDabbler.com: Info Sheet: 16 bit Version Information Component</TITLE>
+  <BASE target="_blank">
+	<style>
+		<!--
+			body {
+				background-color: White;
+				font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+				font-size: 10pt;
+			}
+			h1 {font-size: 12pt;}
+			h2 {font-size: 10pt;}
+			h3 {font-size: 10pt; font-style: italic;}
+			h4 {font-size: 10pt; font-weight: normal; font-style: italic;}
+		-->
+	</style>
+</HEAD>
+
+<BODY>
+<h1>TPJVersionInfo Component</h1>
+<p></P>
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2>Contents</H2>
+
+<UL>
+  <LI><A HREF="#Description" target="_self">Description</A>
+  <LI><A HREF="#Compatibility" target="_self">Compatibility</A>
+  <LI><A HREF="#Installation" target="_self">Installation</A>
+  <LI><A HREF="#Issues" target="_self">Known Issues</A>
+  <LI><A HREF="#Update" target="_self">Update History</A>
+  <LI><A HREF="#License" target="_self">License and Disclaimer</A>
+  <LI><A HREF="#Author" target="_self">About the Author</A>
+</UL>
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2><A NAME="Description"></A>Description</H2>
+
+<P>This is a 16 bit non-visual component for Delphi 1 that encapsulates file version
+	resource information contained in a file.</P>
+
+<P>The component reads information from the file's VERSIONINFO resource. If the file
+	has no such resource then this component returns no information. Use the
+	HaveInfo property to find whether the component has been able to get version
+	information from the file.</P>
+
+<P>The file from which resource information is gleaned is determined by the
+	FileName property. Setting the file name property to the empty string makes
+	the component read information from the executable file in which it embedded.
+	Apart from the usual Name and Tag properties the FileName property is the
+	only design-time property of the component. Other properties are available
+	at run time only and are read only. They present the information from the
+	VERSIONINFO resource to the user. See the help file for further information.</P>
+
+<P>The component introduces no new methods and it has no events.</P>
+
+<H3>Limitations</H3>
+
+<P>VERSIONINFO resources can contain more than one set of string resource
+	information (in StringFileInfo blocks) - usually used to present the
+	information in various languages. This component only reads the information
+	for the first language/character set described in the first VarFileInfo block.</P>
+
+<P>This version of the component makes calls to the 16 bit Windows API. It is not
+	suitable for compilation using the 32 bit Delphi compilers.</P>
+
+<H3>Further information</H3>
+
+<P>For detailed information about file version information see the 16 bit Windows
+	API help topics Version-Information Resource and VERSIONINFO.</P>
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2><A NAME="Compatibility"></A>Compatibility</H2>
+
+<P>This version of the component works only with Delphi 1. Other versions of the component
+	are available for later versions of the compiler.</P>
+
+<p>A 32 bit version of the component (which does support mulitple languages is available from 
+	<a href='http://www.delphidabbler.com/'>www.delphidabbler.com</a>.</p>
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2><A NAME="Installation"></A>Installation</H2>
+
+<P>In these instructions <CODE><STRONG>$(DELPHI)</STRONG></CODE> is to be taken to represent
+	the path where Delphi was installed. For example, if you have Delphi 1 installed on the
+	path <CODE>C:\Borland\Delphi</CODE> then <CODE>$(DELPHI)</CODE> represents that path.</P>
+
+<OL>
+  <LI>Unzip the file <CODE>vinfo16.zip</CODE> into a folder, preserving the directory structure.
+  <LI>Copy the files <CODE>verinfo.pas</CODE> and <CODE>verinfo.dcr</CODE> to the folder from
+  where you wish to install the component into the Delphi Component Palette. This will probably be
+  an existing folder where you keep the library components - say the default
+  <CODE>$(DELPHI)\lib</CODE> folder.
+  <LI>Copy the help file <CODE>verinfo.hlp</CODE> into the <CODE>$(DELPHI)\bin</CODE> folder.
+  <LI>Copy the help keyword file <CODE>verinfo.kwf</CODE> into the <CODE>$(DELPHI)\help</CODE>
+  folder.
+  <LI>Ensure Delphi is not running. Merge the help keyword file by running
+  <CODE>helpinst.exe</CODE> from the <CODE>$(DELPHI)\help</CODE> folder. When
+  <CODE>helpinst.exe</CODE> is running open the <CODE>delphi.hdx</CODE> file and add 
+  <CODE>verinfo.kwf</CODE> and click on the <EM>Save</EM> button.
+  <LI>Start Delphi. Select the <EM>Options | Install Components</EM> menu option. Click the
+  <EM>Add</EM> button, then the <EM>Browse</EM> button and navigate to the
+  <CODE>verinfo.pas</CODE> file in the directory where you placed it. Click <EM>OK</EM> to
+  recompile the components library. You can now delete <CODE>verinfo.pas</CODE> from the placed
+  where you copied it if you wish. 
+  <LI>The component will appear on a palette called <EM>PJ Stuff</EM>. You can move the
+  component to a different palette as required, or hack the source code (before installation) by
+  finding the <CODE>Register</CODE> procedure at the end of the code and changing the string
+  <CODE>'PJ stuff'</CODE> to the name of the required palette.
+</OL>
+
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2><A NAME="Issues"></A>Known Issues</H2>
+
+<P>Under Win 95/8 it is possible that the first time you try to access the help file by selecting
+the component on a form and pressing F1 (or from a property in the object inspector) the help file
+may not be found. In this case find the help file manually (in the <CODE>$(DELPHI)\bin</CODE>
+folder). The location of the help file will be remembered in future.</P>
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2><A NAME="Update"></A>Update History</H2>
+
+<P><STRONG>Un-released</STRONG><BR><EM>VerInfo v1.0 of 25/04/1998</EM></P>
+<UL>
+  <LI>Original version - 16 bit only.
+</UL>
+
+<P><STRONG>Release 1.0.1 of 08/07/1999</STRONG><BR>
+  <EM>VerInfo v1.0.1 of 09/04/1999</EM> <BR>
+  (This release also included Release 2.0 of 32 bit VerInfo v2.0.1 - see <CODE>vinfo32.htm</CODE> 
+  for details).</P>
+<UL>
+  <LI>Changed palette where component installs to "PJ Stuff" from "Own".
+  <LI>Added HTML documentation (shared documentation with Release 2.0.1). 
+</UL>
+
+<P><STRONG>Release 1.0.1a of 28/11/1999</STRONG><BR>
+  <EM>VerInfo v1.0.1 of 09/04/1999</EM> <BR>
+  (Separated 16 bit and 32 bits versions into separate releases).</P>
+<UL>
+  <LI>Updated HTML documentation to separate 16 bit from 32 bit version and to include update 
+  history.
+</UL>
+
+<P><STRONG>Release 1.0.2 of 10/07/2003</STRONG><BR>
+  <EM>VerInfo v1.0.2 of 10/07/2003</EM></P>
+<UL>
+  <LI>Changed palette where component installs to "Own" to "DelphiDabbler".</li>
+</UL>
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2><A NAME="License"></A>License &amp; Disclaimer</H2>
+
+<P>This component is copyright &copy; P.D.Johnson, 1998-2003.</P>
+
+<P>The source code and help files can be freely distributed on a not-for-profit basis
+	providing that:</P>
+
+<OL>
+  <LI>the source code is not altered.</li>
+  <LI>this readme file is distributed with it unchanged.</li>
+</OL>
+
+<P>By not-for-profit I mean that you may recover out of pocket expenses incurred in
+	distributing the code, but should not make a profit from this.</P>
+
+<P>If you discover any bugs in this implementation, or if you have any update 
+	suggestions, please <a href='#Author' target='_self'>contact me</a>.</P>
+
+<P>Please do modify the code for you own use. I'd like to see any changes you make -
+	I could incorporate them into future versions. Please 
+	<a href='#Author' target='_self'>notify me</a> of any changes.</p>
+
+<P>This software is provided as is - no warranty is given as to its suitability for
+	any purposes to which you may wish to put it.</P>
+
+<P>
+<HR noshade>
+<p></P>
+
+<H2><A NAME="Author"></A>About the Author</H2>
+
+<P>I'm Peter Johnson - a hobbyist programmer living in Ceredigion in West Wales, 
+	UK writing mainly in Delphi. My programs are available for download on my
+	web-site: <a href="http://www.delphidabbler.com/">www.delphidabbler.com</a>.</P>
+
+<P>I can be contacted
+	<a href="http://www.delphidabbler.com/contact.php">via the website</a>.</p>
+
+</BODY>
+
+</HTML>

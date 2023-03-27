@@ -1,0 +1,76 @@
+@PROJECT_NAME           Version Information Component (16 bit)
+@PROJECT_DESC           Component that reads version information from files (16
+                        bit).
+@ROOT                   ..\
+@AUTHOR                 Peter Johnson, LLANARTH, Ceredigion, Wales, UK
+@EMAIL                  peter.johnson@openlink.org
+@WEBSITE                http://www.delphidabbler.com/
+@COPYRIGHT              © Peter D Johnson, 1998-2003.
+@LEGAL_NOTICE           This components and source code is placed in the public
+                        domain. It may be freely copied and circulated on a not
+                        for profit basis providing that the code is unmodified
+                        and this notice and information about the author and his
+                        copyright remains attached to the source code.
+@NOTES                  After version 1 development of this component forked.
+                        Development of the 16 bit component continued with
+                        v1.0.1 while a 32 bit version (v2 and later) was also
+                        developed (v2). Development of the 32 bit version is
+                        covered in a different history file.
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0
+    @DATE               26/04/1998
+    @COMMENTS           Original verion (16 bit)
+    @COMPILERS          Microsoft HC31 help compiler.
+    @FILES(
+      @NEW(
+        @FILE           verinfo.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           verinfo.dcr
+        @DATE           24/04/1998
+        @COMMENTS       Resource file for 16 bit component glyph.
+      )
+      @NEW(
+        @FILE           verinfo.hpj
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           verinfo.rtf
+        @DATE           26/04/1998
+        @COMMENTS       Help source file.
+      )
+      @NEW(
+        @FILE           verinfo.kwf
+        @DATE           26/04/1998
+        @COMMENTS       Keyword file for Delphi help.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.1
+    @DATE               09/04/1999
+    @COMMENTS           Changed palette where 16 bit component installs to "PJ
+                        Stuff" from "Own".
+    @COMPILERS          Microsoft HC31 help compiler.
+    @FILES(
+      @UPDATED(
+        @FILE           verinfo.pas
+        @VERSION        1.0.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.2
+    @COMMENTS           Changed component palette from "Own" to "DelphiDabbler".
+    @COMPILERS          Microsoft HC31 help compiler.
+    @DATE               10/07/2003
+    @FILES(
+      @UPDATED(
+        @FILE           verinfo.pas
+        @VERSION        1.0.2
+      )
+    )
+  )
+)

@@ -1,0 +1,24 @@
+Version Information Component
+=============================
+
+Release File Manifest
+---------------------
+
+Release 1.0.1a
+--------------
+
+verinfo.pas         : component source file
+verinfo.dcr         : 16bit resource file for component palette glyph
+verinfo.hlp         : help file (for Delphi 1/2)
+verinfo.kwf         : help keyword file (for Delphi 1/2)
+vinfo16.htm         : information sheet
+readme.txt          : readme file pointing user to vinfo16.htm for info
+
+Release 1.0.2
+-------------
+
+verinfo.pas         : component source file
+verinfo.dcr         : 16bit resource file for component palette glyph
+verinfo.hlp         : help file (for Delphi 1/2)
+verinfo.kwf         : help keyword file (for Delphi 1/2)
+pjvinf16.htm        : information sheet
