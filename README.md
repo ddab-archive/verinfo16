@@ -12,7 +12,7 @@ The final release of the 16 bit version of the component is [v1.0.2](https://git
 
 The 16 bit component source code was never developed under any form of version control.
 
-This repository is based on the source code of the final release along with the changes listed below. The source code as it was at the final release can be viewed by switching to the [`v1.0.2-FINAL tag`](https://github.com/ddab-archive/verinfo16/tree/v1.0.2-FINAL).
+This repository is based on the source code of the final release along with the changes listed below. The source code as it was at the final release can be viewed by switching to the [`v1.0.2-FINAL`](https://github.com/ddab-archive/verinfo16/tree/v1.0.2-FINAL) tag.
 
 ### Commits since final release
 
